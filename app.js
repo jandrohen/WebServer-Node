@@ -9,7 +9,10 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('Home');
+    res.render('Home',{
+        nombre: 'Alejandro',
+        titulo: 'Curso de Node'
+    });
 })
 app.get('/generic', (req, res) => {
     res.sendFile(__dirname + '/public/generic.html');
